@@ -1,0 +1,154 @@
+{
+  "model_name": "XGBoost",
+  "best_cv_model": "XGBoost",
+  "trained_on_rows": 300153,
+  "trained_at": "2026-10-21 20:30",
+  "n_folds": 10,
+  "features": [
+    "stops",
+    "class",
+    "airline",
+    "source_city",
+    "departure_time",
+    "arrival_time",
+    "destination_city",
+    "duration",
+    "days_left"
+  ],
+  "options": {
+    "airline": [
+      "AirAsia",
+      "Air_India",
+      "GO_FIRST",
+      "Indigo",
+      "SpiceJet",
+      "Vistara"
+    ],
+    "source_city": [
+      "Bangalore",
+      "Chennai",
+      "Delhi",
+      "Hyderabad",
+      "Kolkata",
+      "Mumbai"
+    ],
+    "departure_time": [
+      "Afternoon",
+      "Early_Morning",
+      "Evening",
+      "Late_Night",
+      "Morning",
+      "Night"
+    ],
+    "arrival_time": [
+      "Afternoon",
+      "Early_Morning",
+      "Evening",
+      "Late_Night",
+      "Morning",
+      "Night"
+    ],
+    "destination_city": [
+      "Bangalore",
+      "Chennai",
+      "Delhi",
+      "Hyderabad",
+      "Kolkata",
+      "Mumbai"
+    ]
+  },
+  "stops_options": [
+    "zero",
+    "one",
+    "two_or_more"
+  ],
+  "class_options": [
+    "Economy",
+    "Business"
+  ],
+  "airline_classes": {
+    "AirAsia": [
+      "Economy"
+    ],
+    "Air_India": [
+      "Business",
+      "Economy"
+    ],
+    "GO_FIRST": [
+      "Economy"
+    ],
+    "Indigo": [
+      "Economy"
+    ],
+    "SpiceJet": [
+      "Economy"
+    ],
+    "Vistara": [
+      "Business",
+      "Economy"
+    ]
+  },
+  "duration_range": [
+    0.83,
+    49.83,
+    11.25
+  ],
+  "days_left_range": [
+    1,
+    49
+  ],
+  "cv_results": [
+    {
+      "model": "XGBoost",
+      "rank": 1,
+      "rmse": 2598.773710897467,
+      "rmse_std": 26.842016435347617,
+      "mae": 1384.8796047026904,
+      "r2": 0.986889608940724,
+      "train_s": 175.56786429599924
+    },
+    {
+      "model": "LightGBM",
+      "rank": 2,
+      "rmse": 2632.5664590732335,
+      "rmse_std": 31.981140002656016,
+      "mae": 1409.2803449802032,
+      "r2": 0.9865460521109558,
+      "train_s": 72.68230225800153
+    },
+    {
+      "model": "Extra Trees",
+      "rank": 3,
+      "rmse": 2663.9648957765266,
+      "rmse_std": 37.241811723420284,
+      "mae": 1210.3298385513276,
+      "r2": 0.9862232263996449,
+      "train_s": 575.0078608689998
+    },
+    {
+      "model": "AdaBoost",
+      "rank": 4,
+      "rmse": 4430.209230029962,
+      "rmse_std": 48.96717586398365,
+      "mae": 2681.8155745319596,
+      "r2": 0.9618983284351013,
+      "train_s": 540.0153174529996
+    },
+    {
+      "model": "Ridge Regression",
+      "rank": 5,
+      "rmse": 6810.539406190782,
+      "rmse_std": 43.361862554668846,
+      "mae": 4519.039346190637,
+      "r2": 0.9099646612142086,
+      "train_s": 8.00562564900008
+    }
+  ],
+  "versions": {
+    "python": "3.12 - 3.14",
+    "scikit-learn": "1.8.0",
+    "numpy": "2.4.4",
+    "pandas": "3.0.2",
+    "xgboost": "3.4.1"
+  }
+}
